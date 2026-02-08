@@ -1,0 +1,17 @@
+# MySQL Backup Service Requirements
+# This service uses only Python standard library modules
+# No additional packages required
+
+# Python 3.6+ is required for:
+# - f-string formatting
+# - pathlib module
+# - typing module
+
+# System dependencies (not Python packages):
+# - mysqldump (MySQL client tools)
+# - cron service
+# - gzip (usually pre-installed)
+
+# Optional for advanced features:
+# requests>=2.25.1  # For webhook notifications (if implemented)
+# pymysql>=1.0.2    # For MySQL connection testing (if implemented)

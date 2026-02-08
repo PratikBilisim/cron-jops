@@ -1,0 +1,21 @@
+# MySQL Backup Service Crontab Configuration
+# This file should be installed to /etc/cron.d/mysql-backup
+# 
+# Runs MySQL backups twice daily:
+# - 12:30 PM (afternoon backup)
+# - 21:00 PM (evening backup)
+#
+# Both backups include automatic cleanup of old files
+
+# PATH variable to ensure commands are found
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+# Run backup at 12:30 PM every day
+30 12 * * * root /usr/local/bin/mysql-backup-service backup >> /var/log/mysql-backup/cron.log 2>&1
+
+# Run backup at 09:00 PM (21:00) every day  
+0 21 * * * root /usr/local/bin/mysql-backup-service backup >> /var/log/mysql-backup/cron.log 2>&1
+
+# Optional: Run cleanup only operation weekly on Sundays at 02:00 AM
+# This is a safety net in case the cleanup during backup fails
+0 2 * * 0 root /usr/local/bin/mysql-backup-service cleanup >> /var/log/mysql-backup/cron.log 2>&1

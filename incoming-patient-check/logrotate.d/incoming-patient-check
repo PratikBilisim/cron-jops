@@ -1,0 +1,12 @@
+/var/log/incoming-patient-check.log {
+    daily
+    missingok
+    rotate 30
+    compress
+    delaycompress
+    notifempty
+    create 644 root root
+    postrotate
+        # Cron servisini yeniden başlatmaya gerek yok, yeni log dosyası otomatik oluşturulur
+    endscript
+}

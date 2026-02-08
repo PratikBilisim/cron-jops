@@ -1,0 +1,12 @@
+{
+  "env_directory": "/etc/mysql-backup/env",
+  "backup_directory": "/var/backups/mysql",
+  "log_directory": "/var/log/mysql-backup",
+  "log_level": "INFO",
+  "retention_days": 3,
+  "notification": {
+    "enabled": false,
+    "email": null,
+    "webhook": null
+  }
+}
