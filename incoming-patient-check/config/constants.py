@@ -84,7 +84,7 @@ TEST_CLEANUP_DAYS_DEFAULT: Final[int] = 90
 
 # WhatsApp Messaging Configuration
 WHATSAPP_API_URL: Final[str] = 'https://dev.pratikcrm.tr:5009/api/channels/f55e7d46-ebf2-456b-aeb8-e8fd66b21723/send'
-WHATSAPP_PHONE_NUMBER: Final[str] = '905418341781'
+WHATSAPP_PHONE_NUMBER: Final[str] = '905541158818'
 ENABLE_WHATSAPP_NOTIFICATIONS: Final[bool] = True
 WHATSAPP_REQUEST_TIMEOUT: Final[int] = 30
 WHATSAPP_VERIFY_SSL: Final[bool] = False
