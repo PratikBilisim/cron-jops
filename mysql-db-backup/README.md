@@ -42,3 +42,26 @@ BACKUP_NAME=yedek_adi
 - Yapılandırma: `/etc/mysql-backup/`
 - Yedekler: `/var/backups/mysql/`
 - Loglar: `/var/log/mysql-backup/`
+
+Yapılandırma dizininde oluşması gereken config.json dosyası
+ örneği:
+
+```json
+{
+  "env_directory": "/etc/mysql-backup/env",
+  "backup_directory": "/var/backups/mysql",
+  "log_directory": "/var/log/mysql-backup",
+  "log_level": "INFO",
+  "retention_days": 3,
+  "notification": {
+    "enabled": true,
+    "email": null,
+    "webhook": null,
+    "whatsapp": {
+      "enabled": true,
+      "api_url": "https://dev.pratikcrm.tr:5009/api/channels/channelid/send",
+      "group_id": "phone"
+    }
+  }
+}
+```
